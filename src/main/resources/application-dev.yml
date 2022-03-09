@@ -3,6 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/sfg_dev
     username: sfg_dev_user
     password: guru
+    platform: mysql
   jpa:
     hibernate:
       ddl-auto: validate
@@ -10,13 +11,10 @@ spring:
     database: mysql
     show-sql: true
 #    properties:
-#      hibernate:
-#        hbm2ddl:
-#          delimiter: ";"
 #      javax:
 #        persistence:
 #          schema-generation:
 #            create-source: metadata
 #            scripts:
 #              action: create
-#              create-target: spring_database_create.sql
+#              create-target: guru_database_create.sql
