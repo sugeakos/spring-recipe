@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"      th:href="@{/webjars/bootstrap/5.0.2/css/bootstrap.min.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" th:src="@{/webjars/bootstrap/5.0.2/js/bootstrap.min.js}"></script>
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Image Upload</title>
+</head>
+<body>
+    <div style="margin-top: 1%; margin-bottom: 1%;" class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <div class="card card-text-white border-secondary">
+                    <div class="card-header">
+                        Upload new recipe image
+                    </div>
+                    <div class="card-body">
+                        <form action="http:\\localhost" method="post" enctype="multipart/form-data" th:action="@{'/recipe/'+${recipe.getId()}+'/image'}">
+                            <b><label for="imagefile">Select file</label></b>
+                            <input id="imagefile" name="imagefile" type="file">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
